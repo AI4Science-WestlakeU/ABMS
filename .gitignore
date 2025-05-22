@@ -1,0 +1,35 @@
+__pycache__
+*.tar
+checkpoint*
+images*
+logs*
+*.npy
+*.pt
+.idea*
+
+cache/*
+data/ffhq_256_subset@1k/*
+data/imagenet_256_subset@1k/*
+
+# dir start with total_results
+total_results*
+
+# dir name with "results"
+*results*
+
+cache
+data
+
+# excepct the ./linear/data
+!linear/data
+
+exp
+src
+SD_style/models
+output/*
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
