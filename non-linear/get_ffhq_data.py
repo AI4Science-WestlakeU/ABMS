@@ -4,6 +4,8 @@ from datasets import load_dataset
 from PIL import Image
 from tqdm import tqdm
 
+HUGGINGFACE_DATASET_NAME = "your/dataset/name" # find your ffhq-256 dataset name on huggingface
+
 # Make sure the cache directory exists
 os.makedirs("./cache", exist_ok=True)
 
@@ -11,7 +13,7 @@ seed = 42
 random.seed(seed)
 
 # 1. Load the dataset (ffhq-256 has only one split: 'train')
-dataset = load_dataset("bitmind/ffhq-256", split="train", cache_dir="./cache")
+dataset = load_dataset(HUGGINGFACE_DATASET_NAME, split="train", cache_dir="./cache")
 
 # 2. Randomly select 1000 samples
 indices = random.sample(range(len(dataset)), 1000)
@@ -30,5 +32,3 @@ for i, item in enumerate(tqdm(subset, desc="Saving images")):
     img.save(os.path.join(output_dir, f"{i:04d}.png"))
 
 print(f"Saved 1000 PNG images to {output_dir}")
-
-bitmind/celeb-a-hq

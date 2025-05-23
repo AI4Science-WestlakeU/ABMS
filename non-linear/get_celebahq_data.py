@@ -4,10 +4,12 @@ from datasets import load_dataset
 from PIL import Image
 from tqdm import tqdm
 
+HUGGINGFACE_DATASET_NAME = "your/dataset/name" # find your celeb-a-hq dataset name on huggingface
+
 # Make sure the cache directory exists
 os.makedirs("./cache", exist_ok=True)
 
-dataset = load_dataset("bitmind/celeb-a-hq", split="train", cache_dir="./cache")
+dataset = load_dataset(HUGGINGFACE_DATASET_NAME, split="train", cache_dir="./cache")
 
 # 2. Select first 1000 samples
 indices = list(range(1000))

@@ -1,6 +1,6 @@
 #! /bin/bash
 
-real_folder=./images/celeb-a-hq_subset@1k
+real_folder=./images/ffhq_256_subset@1k
 gen_folder=./exp/image_samples/arcface_face_ours_t@100_stop@100_rho@100.0_guidance@0.08
 available_gpu_ids=(0 1 2 3 4 5 6 7)
 faceid_results_dir=$gen_folder/faceid_loss_results

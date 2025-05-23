@@ -189,18 +189,6 @@ class Diffusion(object):
             x = [((y + 1.0) / 2.0).clamp(0.0, 1.0) for y in x]
             z = [((y + 1.0) / 2.0).clamp(0.0, 1.0) for y in z]
 
-            # for i in [-1]:  # range(len(x)):
-            # for i in range(len(x)):
-            #     for j in range(x[i].size(0)):
-            #         tvu.save_image(
-            #             x[i][j], os.path.join(self.args.image_folder, f"{index + j}_{i}.png")
-            #         )
-            #
-            # for i in range(len(z)):
-            #     for j in range(z[i].size(0)):
-            #         tvu.save_image(
-            #             z[i][j], os.path.join(self.args.image_folder, f"pred_x0_{index + j}_{i}.png")
-            #         )
             for i in range(len(x)):
                 for j in range(x[i].size(0)):
                     print(os.path.join(self.args.image_folder, f"{ref_path.split('/')[-1]}"))
@@ -208,11 +196,7 @@ class Diffusion(object):
                         x[i][j], os.path.join(self.args.image_folder, f"{ref_path.split('/')[-1]}")
                     )
 
-            # for i in range(len(z)):
-            #     for j in range(z[i].size(0)):
-            #         tvu.save_image(
-            #             z[i][j], os.path.join(self.args.image_folder, f"pred_x0_{index + j}_{i}.png")
-            #         )
+
 
     def sample_image_alogrithm_arcface_ddim(self, x, model, last=True, cls_fn=None, rho_scale=1.0, stop=100, guidance_rate=0.05,
                                             ref_path=None, method='ours'):

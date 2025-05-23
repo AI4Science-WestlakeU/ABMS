@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # face
-method="freedom" # dsg, freedom, ours
+method="ours" # dsg, freedom, ours
 guidance_rate=1.0
 rho_scale=100
-process_start=985
+process_start=0
 process_end=999
 
 # Retry settings

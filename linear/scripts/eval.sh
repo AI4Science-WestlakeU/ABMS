@@ -5,8 +5,8 @@ CUDA_DEVICES=("cuda:0" "cuda:1" "cuda:2" "cuda:3" "cuda:4" "cuda:5" "cuda:6" "cu
 
 # Define result and ground truth root pairs
 declare -A RESULT_GT_PAIRS=(
-    ["/data/dengwenhao/20250423_guidance_bench_1/Linear_Inverse_Problems/total_results_ours_full_DDIM100/ours_full_interval_1_guidance_0.1_n_guidance_directions_1_imagenet"]="./data/imagenet_256_subset@50"
-    ["/data/dengwenhao/20250423_guidance_bench_1/Linear_Inverse_Problems/total_results_ours_full_DDIM100/ours_full_interval_1_guidance_0.2_n_guidance_directions_1_imagenet"]="./data/imagenet_256_subset@50"
+    ["total_results_ours_DDIM100/ours_interval_1_guidance_0.1_imagenet"]="./data/imagenet_256_subset@1k"
+    ["total_results_ours_DDIM100/ours_interval_1_guidance_0.2_imagenet"]="./data/imagenet_256_subset@1k"
 )
 
 # Create a temporary directory for storing intermediate results

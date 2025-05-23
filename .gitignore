@@ -16,12 +16,15 @@ total_results*
 
 # dir name with "results"
 *results*
+!*/SD_style/*results*
 
 cache
 data
 
 # excepct the ./linear/data
 !linear/data
+!*/SD_style/ldm/data
+
 
 exp
 src

@@ -1,19 +1,19 @@
 #!/bin/bash
 
+#0. Choose the method
+method="ours" # "ours", "ours_full", "DSG", "MCG", "PS"
 
 #1. Choose The Task
-#task_config=("configs/inpainting_config.yaml" "configs/super_resolution_config.yaml" "configs/gaussian_deblur_config.yaml")
-task_config=("configs/gaussian_deblur_config.yaml")
+task_config=("configs/inpainting_config.yaml" "configs/super_resolution_config.yaml" "configs/gaussian_deblur_config.yaml")
 
 #2. Choose the root of dataset
-#data_root="./data/imagenet_256_subset@1k"
-data_root="./data/imagenet_256_subset@50"
+data_root="./data/imagenet_256_subset@1k"
 
 # Set DATA_ROOT environment variable for all subsequent commands
 export DATA_ROOT="$data_root"
 
 #3. Choose the hyperparameters
-guidance_scales=(0.2 0.3)  #(100000 200000 500000 1000000 2000000 5000000)
+guidance_scales=(0.3) 
 intervals=(1)
 
 #4. Choose the DDIM steps and available GPUs
@@ -22,10 +22,8 @@ GPUS=(2 5 7)  # List your available GPUs here
 
 #5. Choose the diffusion model config
 config="model_config.yaml"
-#config="imagenet_model_config.yaml"
 
-#save_root="total_results_ours_DDIM"$DDIM
-save_root="50_results_ours_DDIM"$DDIM
+save_root="total_results_${method}_DDIM"$DDIM
 
 # Function to run a single job
 run_job() {
@@ -33,7 +31,7 @@ run_job() {
   local guidance_scale=$2
   local yaml_file=$3
   local gpu=$4
-  local save_dir="./${save_root}/ours_interval_${interval}_guidance_${guidance_scale}_imagenet"
+  local save_dir="./${save_root}/${method}_interval_${interval}_guidance_${guidance_scale}_imagenet"
   CUDA_VISIBLE_DEVICES=$gpu python sample_condition_same_inputs.py \
     --model_config configs/"$config" \
     --diffusion_config configs/diffusion_ddim"${DDIM}"_config.yaml \
@@ -41,7 +39,7 @@ run_job() {
     --gpu 0 \
     --interval="$interval" \
     --save_dir="$save_dir" \
-    --method "ours" \
+    --method "$method" \
     --guidance_scale "$guidance_scale"
 }
 
