@@ -118,3 +118,8 @@ Place the 256x256 image you want to guide in text-style guidance in `./non-linea
 ### 4) Evaluation
 For FaceID Guidance:
 `cd non-linear/Face-GD/` modify the **real_folder** and **gen_folder** in `bash run_eval.sh` and run `bash run_eval.sh`.
+
+## Handwriting Generation
+
+### Quick Start
+Implement according to the original paper. Just replace the corresponding files `./unetddpm.py` `./evaluate_char.py` and run evaluate_char.py .
