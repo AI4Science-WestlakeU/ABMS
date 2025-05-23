@@ -1,6 +1,6 @@
 # Additional Backward Guided Diffusion
 
-The code of handwriting generation task is based on [[paper]](https://arxiv.org/abs/2402.03201).
+The code of handwriting generation task is based on [[paper]](https://arxiv.org/abs/2410.02309).
 
 The code of both Linear Inverse Problem and Non-linear Problem are based on **DSG** [[paper]](https://arxiv.org/abs/2402.03201).
 
