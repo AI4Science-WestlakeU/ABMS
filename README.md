@@ -122,4 +122,6 @@ For FaceID Guidance:
 ## Handwriting Generation
 
 ### Quick Start
-Implement according to the original paper. Just replace the corresponding files `./unetddpm.py` `./evaluate_char.py` and run evaluate_char.py .
+The code of handwriting generation task is based on [[paper]](https://arxiv.org/abs/2410.02309).
+
+Implement according to the original repository. Just replace the corresponding files `./unet_ddpm.py` `./basemodel.py` and run `evaluate_char.py` .
