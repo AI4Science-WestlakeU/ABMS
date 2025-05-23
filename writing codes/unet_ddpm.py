@@ -317,7 +317,7 @@ class DDPM(nn.Module):
 
         inputs = self.get_contents_times(xt_1, t=t-1, tags=tags, durations=durations)
         predict_noise = self.pred_noise(inputs, style_features)
-        x_mean = self.remove_noise(xt_1, t-1, predict_noise) #预测xt-2均值
+        x_mean = self.remove_noise(xt_1, t-1, predict_noise)
 
         sigma_t_1 = torch.sqrt(0.8 * self.beta[t-1] * (1 - self.alpha_cumprod[t-2]) / (1 - self.alpha_cumprod[t-1]))
         z = torch.randn_like(x_mean)
@@ -374,7 +374,7 @@ class DDPM(nn.Module):
         return mean
     
     def dsg_new(self, xt, classifier, char_ids, lr, t, predict_noise):
-        mean = self.remove_noise(xt, t, predict_noise) #预测xt-1均值
+        mean = self.remove_noise(xt, t, predict_noise)
         xt.requires_grad_(True)
         x0_pred = self.estimate_x0(xt, t, predict_noise)
         p = classifier(x0_pred) 
@@ -397,7 +397,7 @@ class DDPM(nn.Module):
         return mean
     
     def projected_gradient_update(self, z, lr):
-        raw_grad = z.grad.data  # 输入梯度形状: (b, 3, len)
+        raw_grad = z.grad.data 
 
         grad_mean = torch.mean(raw_grad, dim=(1,2), keepdim=True) 
         projected_grad = raw_grad - grad_mean 
