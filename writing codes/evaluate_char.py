@@ -13,7 +13,7 @@ mydict = np.load('./datas/mydict.npy', allow_pickle=True).tolist()
 def draw(traj, writer=0, i=0, fake=True, condition=True):
     seq = traj.copy()
     seq[:, 0:2] = np.cumsum(traj[:, 0:2], axis=0)
-    strokes = np.split(seq, np.where(seq[:, 2] == -1)[0] + 1)  # split[x,y]到x前一个截止
+    strokes = np.split(seq, np.where(seq[:, 2] == -1)[0] + 1) 
     strokes.pop()
     for s in strokes:
         plt.plot(s[:, 0], -s[:, 1], linewidth=1.5)
