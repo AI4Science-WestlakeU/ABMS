@@ -1,4 +1,4 @@
-# Additional Backward Guided Diffusion
+# Additional Backward Guided Diffusion [ICLR 2026]
 
 The code of handwriting generation task is based on [[paper]](https://arxiv.org/abs/2410.02309).
 
