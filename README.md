@@ -1,6 +1,9 @@
-# Additional Backward Guided Diffusion [ICLR 2026]
+# Additional Backward Guided Diffusion
 
-The code of handwriting generation task is based on [[paper]](https://arxiv.org/abs/2410.02309).
+## 🎉🎉🎉 This work has been accepted by ICLR2025 🎉🎉🎉
+
+
+The code of handwriting generation task is based on OLHWG[[paper]](https://arxiv.org/abs/2410.02309).
 
 The code of both Linear Inverse Problem and Non-linear Problem are based on **DSG** [[paper]](https://arxiv.org/abs/2402.03201).
 
@@ -123,3 +126,19 @@ For FaceID Guidance:
 
 ### Quick Start
 Implement according to the original paper. Just replace the corresponding files `./unetddpm.py` `./evaluate_char.py` and run evaluate_char.py .
+
+
+## Notification
+The code is a bit messy. Please be understanding! Due to graduation, some files were lost. If you have any questions, feel free to communicate with the author at any time. Wish you all smooth progress in your scientific research!
+
+If you find our work helpful, please cite us using:
+```bibtex
+@inproceedings{
+ren2026one,
+title={One step further with Monte-Carlo sampler to guide diffusion better},
+author={Minsi Ren and Wenhao Deng and Ruiqi Feng and Tailin Wu},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026},
+url={https://openreview.net/forum?id=cpdHmRtx7d}
+}
+
