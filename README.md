@@ -1,6 +1,6 @@
 # Additional Backward Guided Diffusion
 
-## 🎉🎉🎉 This work has been accepted by ICLR2025 🎉🎉🎉
+## 🎉🎉🎉 This work has been accepted by ICLR2026 🎉🎉🎉
 
 
 The code of handwriting generation task is based on OLHWG[[paper]](https://arxiv.org/abs/2410.02309).
