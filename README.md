@@ -1,7 +1,17 @@
-# Additional Backward Guided Diffusion
+# One Step Further with Monte-Carlo Sampler to Guide Diffusion Better
+
+[![arXiv](https://img.shields.io/badge/arXiv-2603.06685-b31b1b.svg)](https://arxiv.org/abs/2603.06685)
+[![ICLR 2026](https://img.shields.io/badge/ICLR-2026-5b9bd5.svg)](https://openreview.net/forum?id=cpdHmRtx7d)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+> **Official implementation of "One step further with Monte-Carlo sampler to guide diffusion better" (ICLR 2026)**
+>
+> **Authors**: Minsi Ren, Wenhao Deng, Ruiqi Feng, Tailin Wu  
+> **Affiliation**: AI for Scientific Simulation and Discovery Lab, Westlake University
+
+---
 
 ## 🎉🎉🎉 This work has been accepted by ICLR2026 🎉🎉🎉
-
 
 The code of handwriting generation task is based on **OLHWG**[[paper]](https://arxiv.org/abs/2410.02309).
 
